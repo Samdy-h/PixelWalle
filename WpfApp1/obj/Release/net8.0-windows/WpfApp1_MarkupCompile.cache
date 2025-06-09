@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Heidy\Universidad\programacion\Proyecto2!!\WpfApp1\obj\Release\net8.0-windows\
+D:\Heidy\Escuela\Programación\WpfApp1\obj\Release\net8.0-windows\
 WpfApp1
 none
 false
-TRACE;RELEASE;NET;NET8_0;NETCOREAPP
-D:\Heidy\Universidad\programacion\Proyecto2!!\WpfApp1\App.xaml
-11407045341
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+D:\Heidy\Escuela\Programación\WpfApp1\App.xaml
+1-1644662438
 
-4537130452
-198-211836927
-MainWindow.xaml;
+111073100833
+198-537775612
+Views\MainWindow.xaml;
 
-False
+True
 

@@ -8,23 +8,23 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\YOLI\\.nuget\\packages\\": {},
+    "C:\\Users\\Samir\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Heidy\\Universidad\\programacion\\Proyecto2!!\\WpfApp1\\WpfApp1.csproj",
+      "projectUniqueName": "C:\\Users\\Samir\\Desktop\\Nueva carpeta\\Proyecto 2\\Nueva carpeta\\WpfApp1\\WpfApp1.csproj",
       "projectName": "WpfApp1",
-      "projectPath": "D:\\Heidy\\Universidad\\programacion\\Proyecto2!!\\WpfApp1\\WpfApp1.csproj",
-      "packagesPath": "C:\\Users\\YOLI\\.nuget\\packages\\",
-      "outputPath": "D:\\Heidy\\Universidad\\programacion\\Proyecto2!!\\WpfApp1\\obj\\",
+      "projectPath": "C:\\Users\\Samir\\Desktop\\Nueva carpeta\\Proyecto 2\\Nueva carpeta\\WpfApp1\\WpfApp1.csproj",
+      "packagesPath": "C:\\Users\\Samir\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Samir\\Desktop\\Nueva carpeta\\Proyecto 2\\Nueva carpeta\\WpfApp1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\YOLI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Samir\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
