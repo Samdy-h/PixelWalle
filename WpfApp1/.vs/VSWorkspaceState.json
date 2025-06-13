@@ -1,9 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Utils",
-    "\\ViewModels",
+    "\\Core",
+    "\\Core\\Commands",
+    "\\Core\\Parsing",
+    "\\Core\\Runtime",
+    "\\GUI",
+    "\\GUI\\ViewModels",
     "\\Views"
   ],
+  "SelectedNode": "\\Core\\Runtime\\RuntimeState.cs",
   "PreviewInSolutionExplorer": false
 }
