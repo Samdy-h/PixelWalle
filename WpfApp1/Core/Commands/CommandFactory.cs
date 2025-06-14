@@ -10,7 +10,11 @@ namespace PixelWallE.Core.Commands
         {
             { "Spawn", () => new SpawnCommand() },
             { "Color", () => new ColorCommand() },
-            { "Size", () => new SizeCommand() }
+            { "Size", () => new SizeCommand() },
+            { "DrawLine", () => new DrawLineCommand() },
+            { "DrawCircle", () => new DrawCircleCommand() },
+            { "DrawRectangle", () => new DrawRectangleCommand() },
+            { "Fill", () => new FillCommand() }
         };
 
         public static IPixelCommand CreateCommand(string commandName)

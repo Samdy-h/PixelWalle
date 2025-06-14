@@ -2,13 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Core",
-    "\\Core\\Commands",
-    "\\Core\\Parsing",
-    "\\Core\\Runtime",
-    "\\GUI",
-    "\\GUI\\ViewModels",
-    "\\Views"
+    "\\Core\\Commands"
   ],
-  "SelectedNode": "\\Core\\Runtime\\RuntimeState.cs",
+  "SelectedNode": "\\Core\\Commands\\DrawLineCommand.cs",
   "PreviewInSolutionExplorer": false
 }

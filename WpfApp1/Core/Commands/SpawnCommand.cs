@@ -1,8 +1,7 @@
-// Core/Commands/SpawnCommand.cs
-using PixelWallE.Core.Runtime;
-using PixelWallE.Core.Parsing;
 using PixelWallE.Core.Exceptions;
-using System.Drawing;
+using PixelWallE.Core.Parsing;
+using PixelWallE.Core.Runtime;
+using System.Windows; // Para Point
 
 namespace PixelWallE.Core.Commands
 {
