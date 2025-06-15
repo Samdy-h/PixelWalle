@@ -3,32 +3,100 @@
   "WorkspaceRootPath": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawLineCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\DrawLineCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Controls\\CanvasControl.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\ViewModels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\FillCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\FillCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Controls\\CanvasControl.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\CommandFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\CommandFactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawCircleCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\DrawCircleCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Runtime\\RuntimeState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Runtime\\RuntimeState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\ViewModels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\ExpressionParser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Expressions\\ExpressionParser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\GoToCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\GoToCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\BinaryExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Expressions\\BinaryExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\FunctionExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Expressions\\FunctionExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\LiteralExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Expressions\\LiteralExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\VariableExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Expressions\\VariableExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawLineCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\DrawLineCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\IPixelExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Expressions\\IPixelExpression.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawRectangleCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\DrawRectangleCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandParameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Parsing\\CommandParameter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\ColorCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\ColorCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\ViewModelBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\ViewModels\\ViewModelBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SpawnCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\SpawnCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\AssignmentCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\AssignmentCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SizeCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\SizeCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawCircleCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\DrawCircleCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandSyntax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Parsing\\CommandSyntax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\FillCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\FillCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Views\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Views\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\App.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -46,10 +114,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\ViewModelBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\ViewModels\\ViewModelBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\ViewModels\\RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -62,40 +126,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Views\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Views\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Views\\MainWindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Controls\\CanvasControl.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUI\\Controls\\CanvasControl.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Runtime\\RuntimeState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Runtime\\RuntimeState.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandSyntax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Parsing\\CommandSyntax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Exceptions\\SyntaxException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Exceptions\\SyntaxException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Exceptions\\ExecutionException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Exceptions\\ExecutionException.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SpawnCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\SpawnCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SizeCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Core\\Commands\\SizeCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\IPixelCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -121,7 +157,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 27,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
@@ -139,133 +175,203 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "GUI\\ViewModels\\MainViewModel.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "GUI\\ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAqwK4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:47:11.079Z",
+              "Title": "CanvasControl.xaml",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml",
+              "RelativeDocumentMoniker": "GUI\\Controls\\CanvasControl.xaml",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml",
+              "RelativeToolTip": "GUI\\Controls\\CanvasControl.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-13T23:50:41.769Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DrawLineCommand.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawLineCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Commands\\DrawLineCommand.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawLineCommand.cs",
-              "RelativeToolTip": "Core\\Commands\\DrawLineCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAABAAAAAAAAAA==",
+              "Title": "CanvasControl.xaml.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml.cs",
+              "RelativeDocumentMoniker": "GUI\\Controls\\CanvasControl.xaml.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml.cs",
+              "RelativeToolTip": "GUI\\Controls\\CanvasControl.xaml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T23:46:18.279Z",
+              "WhenOpened": "2025-06-13T23:51:12.952Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FillCommand.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\FillCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Commands\\FillCommand.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\FillCommand.cs",
-              "RelativeToolTip": "Core\\Commands\\FillCommand.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAUwEwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T05:35:20.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CommandFactory.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\CommandFactory.cs",
               "RelativeDocumentMoniker": "Core\\Commands\\CommandFactory.cs",
               "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\CommandFactory.cs",
               "RelativeToolTip": "Core\\Commands\\CommandFactory.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T10:47:53.778Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DrawCircleCommand.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawCircleCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Commands\\DrawCircleCommand.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawCircleCommand.cs",
-              "RelativeToolTip": "Core\\Commands\\DrawCircleCommand.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAADwv4MAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "RuntimeState.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Runtime\\RuntimeState.cs",
+              "RelativeDocumentMoniker": "Core\\Runtime\\RuntimeState.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Runtime\\RuntimeState.cs",
+              "RelativeToolTip": "Core\\Runtime\\RuntimeState.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAuwE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T03:37:05.433Z",
+              "WhenOpened": "2025-06-13T10:47:33.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "GUI\\ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "GUI\\ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAALsBAAAAAAAAAAAuwNQBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T10:47:11.079Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ExpressionParser.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\ExpressionParser.cs",
+              "RelativeDocumentMoniker": "Core\\Expressions\\ExpressionParser.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\ExpressionParser.cs",
+              "RelativeToolTip": "Core\\Expressions\\ExpressionParser.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAuwHkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:52:18.3Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GoToCommand.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\GoToCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Commands\\GoToCommand.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\GoToCommand.cs",
+              "RelativeToolTip": "Core\\Commands\\GoToCommand.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwDEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T15:10:49.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BinaryExpression.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\BinaryExpression.cs",
+              "RelativeDocumentMoniker": "Core\\Expressions\\BinaryExpression.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\BinaryExpression.cs",
+              "RelativeToolTip": "Core\\Expressions\\BinaryExpression.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:50:27.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FunctionExpression.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\FunctionExpression.cs",
+              "RelativeDocumentMoniker": "Core\\Expressions\\FunctionExpression.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\FunctionExpression.cs",
+              "RelativeToolTip": "Core\\Expressions\\FunctionExpression.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAuwCEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T06:02:21.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LiteralExpression.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\LiteralExpression.cs",
+              "RelativeDocumentMoniker": "Core\\Expressions\\LiteralExpression.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\LiteralExpression.cs",
+              "RelativeToolTip": "Core\\Expressions\\LiteralExpression.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:48:44.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "VariableExpression.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\VariableExpression.cs",
+              "RelativeDocumentMoniker": "Core\\Expressions\\VariableExpression.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\VariableExpression.cs",
+              "RelativeToolTip": "Core\\Expressions\\VariableExpression.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:49:37.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DrawLineCommand.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawLineCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Commands\\DrawLineCommand.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawLineCommand.cs",
+              "RelativeToolTip": "Core\\Commands\\DrawLineCommand.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAuwIYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T02:33:39.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IPixelExpression.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\IPixelExpression.cs",
+              "RelativeDocumentMoniker": "Core\\Expressions\\IPixelExpression.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Expressions\\IPixelExpression.cs",
+              "RelativeToolTip": "Core\\Expressions\\IPixelExpression.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:30:10.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "DrawRectangleCommand.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawRectangleCommand.cs",
               "RelativeDocumentMoniker": "Core\\Commands\\DrawRectangleCommand.cs",
               "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawRectangleCommand.cs",
               "RelativeToolTip": "Core\\Commands\\DrawRectangleCommand.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAcwH4AAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T05:27:30.312Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-14T05:27:30.312Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
+              "Title": "CommandParameter.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandParameter.cs",
+              "RelativeDocumentMoniker": "Core\\Parsing\\CommandParameter.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandParameter.cs",
+              "RelativeToolTip": "Core\\Parsing\\CommandParameter.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAuwDAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:53:34.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "ColorCommand.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\ColorCommand.cs",
               "RelativeDocumentMoniker": "Core\\Commands\\ColorCommand.cs",
               "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\ColorCommand.cs",
               "RelativeToolTip": "Core\\Commands\\ColorCommand.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwCYAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:51:33.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-13T10:51:33.33Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "App.xaml",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-13T10:43:51.377Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ResourcePart.cs",
-              "DocumentMoniker": "C:\\Users\\Yoli\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "ToolTip": "C:\\Users\\Yoli\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAswCcAAAAEAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T05:09:28.778Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WpfApp1.csproj",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\WpfApp1.csproj",
-              "RelativeDocumentMoniker": "WpfApp1.csproj",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\WpfApp1.csproj",
-              "RelativeToolTip": "WpfApp1.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-13T10:49:58.84Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "GUI\\ViewModels\\ViewModelBase.cs",
@@ -277,7 +383,125 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
+              "Title": "SpawnCommand.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SpawnCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Commands\\SpawnCommand.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SpawnCommand.cs",
+              "RelativeToolTip": "Core\\Commands\\SpawnCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T11:04:16.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AssignmentCommand.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\AssignmentCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Commands\\AssignmentCommand.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\AssignmentCommand.cs",
+              "RelativeToolTip": "Core\\Commands\\AssignmentCommand.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwCoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:54:13.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SizeCommand.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SizeCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Commands\\SizeCommand.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SizeCommand.cs",
+              "RelativeToolTip": "Core\\Commands\\SizeCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T11:04:08.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DrawCircleCommand.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawCircleCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Commands\\DrawCircleCommand.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\DrawCircleCommand.cs",
+              "RelativeToolTip": "Core\\Commands\\DrawCircleCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T03:37:05.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CommandSyntax.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandSyntax.cs",
+              "RelativeDocumentMoniker": "Core\\Parsing\\CommandSyntax.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandSyntax.cs",
+              "RelativeToolTip": "Core\\Parsing\\CommandSyntax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T11:01:41.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FillCommand.cs",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\FillCommand.cs",
+              "RelativeDocumentMoniker": "Core\\Commands\\FillCommand.cs",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\FillCommand.cs",
+              "RelativeToolTip": "Core\\Commands\\FillCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T05:35:20.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Views\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "GUI\\Views\\MainWindow.xaml",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Views\\MainWindow.xaml",
+              "RelativeToolTip": "GUI\\Views\\MainWindow.xaml",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwHEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-14T04:51:24.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "App.xaml",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-13T10:43:51.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ResourcePart.cs",
+              "DocumentMoniker": "C:\\Users\\Yoli\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
+              "ToolTip": "C:\\Users\\Yoli\\AppData\\Local\\Temp\\.vsdbgsrc\\b49ace08f4cd26a4f275d628999a0f91ccb8a1892704530d9e6f5bd1284082f1\\ResourcePart.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAswCcAAAAEAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T05:09:28.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "WpfApp1.csproj",
+              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\WpfApp1.csproj",
+              "RelativeDocumentMoniker": "WpfApp1.csproj",
+              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\WpfApp1.csproj",
+              "RelativeToolTip": "WpfApp1.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-13T10:49:58.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\RelayCommand.cs",
               "RelativeDocumentMoniker": "GUI\\ViewModels\\RelayCommand.cs",
@@ -289,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 29,
               "Title": "PixelViewModel.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\ViewModels\\PixelViewModel.cs",
               "RelativeDocumentMoniker": "GUI\\ViewModels\\PixelViewModel.cs",
@@ -301,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 30,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "GUI\\Views\\MainWindow.xaml.cs",
@@ -313,67 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Views\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "GUI\\Views\\MainWindow.xaml",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Views\\MainWindow.xaml",
-              "RelativeToolTip": "GUI\\Views\\MainWindow.xaml",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAQwHUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-14T04:51:24.479Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CanvasControl.xaml.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml.cs",
-              "RelativeDocumentMoniker": "GUI\\Controls\\CanvasControl.xaml.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml.cs",
-              "RelativeToolTip": "GUI\\Controls\\CanvasControl.xaml.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAmwBwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T23:51:12.952Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "CanvasControl.xaml",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml",
-              "RelativeDocumentMoniker": "GUI\\Controls\\CanvasControl.xaml",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\GUI\\Controls\\CanvasControl.xaml",
-              "RelativeToolTip": "GUI\\Controls\\CanvasControl.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-13T23:50:41.769Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RuntimeState.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Runtime\\RuntimeState.cs",
-              "RelativeDocumentMoniker": "Core\\Runtime\\RuntimeState.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Runtime\\RuntimeState.cs",
-              "RelativeToolTip": "Core\\Runtime\\RuntimeState.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAmwFkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T10:47:33.296Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CommandSyntax.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandSyntax.cs",
-              "RelativeDocumentMoniker": "Core\\Parsing\\CommandSyntax.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Parsing\\CommandSyntax.cs",
-              "RelativeToolTip": "Core\\Parsing\\CommandSyntax.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwCgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T11:01:41.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 31,
               "Title": "SyntaxException.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Exceptions\\SyntaxException.cs",
               "RelativeDocumentMoniker": "Core\\Exceptions\\SyntaxException.cs",
@@ -385,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 32,
               "Title": "ExecutionException.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Exceptions\\ExecutionException.cs",
               "RelativeDocumentMoniker": "Core\\Exceptions\\ExecutionException.cs",
@@ -397,31 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SpawnCommand.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SpawnCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Commands\\SpawnCommand.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SpawnCommand.cs",
-              "RelativeToolTip": "Core\\Commands\\SpawnCommand.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T11:04:16.193Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "SizeCommand.cs",
-              "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SizeCommand.cs",
-              "RelativeDocumentMoniker": "Core\\Commands\\SizeCommand.cs",
-              "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\Commands\\SizeCommand.cs",
-              "RelativeToolTip": "Core\\Commands\\SizeCommand.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAmwCMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-13T11:04:08.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 33,
               "Title": "IPixelCommand.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Core\\IPixelCommand.cs",
               "RelativeDocumentMoniker": "Core\\IPixelCommand.cs",
@@ -433,25 +573,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 35,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
               "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-13T10:45:57.18Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 34,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
               "ToolTip": "D:\\Heidy\\Escuela\\Programaci\u00F3n\\Proyecto2\\PixelWalle\\WpfApp1\\Views\\MainWindow.xaml",
               "RelativeToolTip": "Views\\MainWindow.xaml",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAowHUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-13T19:33:13.857Z"
             }

@@ -1,16 +1,17 @@
+using Microsoft.Win32;
 using PixelWallE.Core.Commands;
 using PixelWallE.Core.Exceptions;
+using PixelWallE.Core.Expressions;
 using PixelWallE.Core.Parsing;
 using PixelWallE.Core.Runtime;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using Microsoft.Win32;
-using System.IO;
 using System.Windows.Media;
 
 namespace PixelWallE.ViewModels
@@ -25,6 +26,7 @@ namespace PixelWallE.ViewModels
         public MainViewModel()
         {
             _runtimeState = new RuntimeState(CanvasSize);
+            _runtimeState.ClearErrors += () => Errors.Clear();
             ExecuteCommand = new RelayCommand(ExecuteCode);
             ResizeCanvasCommand = new RelayCommand(ResizeCanvas);
             LoadCommand = new RelayCommand(LoadFile);
@@ -57,17 +59,22 @@ namespace PixelWallE.ViewModels
             set => SetProperty(ref _canvasSize, value);
         }
 
-        // Propiedades para mostrar el estado
-        public string WallEPositionDisplay => $"Posición: ({(int)_runtimeState.WallEPosition.X}, {(int)_runtimeState.WallEPosition.Y})";
+        public string WallEPositionDisplay =>
+            _runtimeState.HasSpawned
+                ? $"Posición: ({(int)_runtimeState.WallEPosition.X}, {(int)_runtimeState.WallEPosition.Y})"
+                : "No posicionado";
+
         public string CurrentColorDisplay => $"Color: {_runtimeState.CurrentColor}";
         public string BrushSizeDisplay => $"Tamaño pincel: {_runtimeState.BrushSize}";
         public string CanvasSizeDisplay => $"Tamaño canvas: {_runtimeState.CanvasSize}x{_runtimeState.CanvasSize}";
+        public string SpawnStatus =>
+            _runtimeState.HasSpawned
+                ? $"Spawned at ({_runtimeState.WallEPosition.X}, {_runtimeState.WallEPosition.Y})"
+                : "Not spawned";
 
-        // Números de línea para el editor
         public ObservableCollection<string> LineNumbers { get; } = new ObservableCollection<string>();
-
-        // Píxeles para el canvas
         public ObservableCollection<PixelViewModel> CanvasPixels { get; } = new ObservableCollection<PixelViewModel>();
+        public ObservableCollection<ErrorInfo> Errors { get; } = new ObservableCollection<ErrorInfo>();
 
         public ICommand ExecuteCommand { get; }
         public ICommand ResizeCanvasCommand { get; }
@@ -85,11 +92,14 @@ namespace PixelWallE.ViewModels
             }
         }
 
-        public void ExecuteCode()
+        private void ExecuteCode()
         {
             try
             {
                 ExecutionResult = "Ejecutando código...";
+                Errors.Clear();
+                _runtimeState = new RuntimeState(CanvasSize); // Reset state
+                _runtimeState.HasSpawned = false; // Reset spawn status
 
                 if (string.IsNullOrWhiteSpace(Code))
                 {
@@ -97,73 +107,79 @@ namespace PixelWallE.ViewModels
                     return;
                 }
 
-                var lines = Code.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                var lines = Code.Split(new[] { '\r', '\n' }, StringSplitOptions.None);
+                bool spawnCommandFound = false;
 
-                foreach (var line in lines)
+                // Primera pasada: recolectar etiquetas
+                _runtimeState.Labels.Clear();
+                for (int i = 0; i < lines.Length; i++)
                 {
-                    var trimmedLine = line.Trim();
-                    if (string.IsNullOrEmpty(trimmedLine)) continue;
-
-                    CommandSyntax syntax;
-                    string commandName;
-
-                    // Manejar comandos sin paréntesis (como Fill)
-                    if (!trimmedLine.Contains("(") || !trimmedLine.Contains(")"))
+                    string trimmedLine = lines[i].Trim();
+                    if (trimmedLine.EndsWith(":") && !trimmedLine.Contains(" "))
                     {
-                        commandName = trimmedLine;
-                        syntax = new CommandSyntax(commandName);
-                    }
-                    else // Comandos con parámetros
-                    {
-                        var openParen = trimmedLine.IndexOf('(');
-                        var closeParen = trimmedLine.IndexOf(')');
-
-                        if (openParen == -1 || closeParen == -1 || closeParen < openParen)
+                        string label = trimmedLine.TrimEnd(':');
+                        if (!string.IsNullOrWhiteSpace(label))
                         {
-                            throw new SyntaxException("Sintaxis inválida - faltan paréntesis");
-                        }
-
-                        commandName = trimmedLine.Substring(0, openParen).Trim();
-                        var parametersPart = trimmedLine.Substring(openParen + 1, closeParen - openParen - 1);
-                        syntax = new CommandSyntax(commandName);
-
-                        // Solo procesar parámetros si hay contenido
-                        if (!string.IsNullOrWhiteSpace(parametersPart))
-                        {
-                            var parameters = parametersPart.Split(',');
-
-                            foreach (var param in parameters)
+                            if (!IsValidLabelName(label))
                             {
-                                var trimmedParam = param.Trim();
-
-                                if (int.TryParse(trimmedParam, out int intValue))
-                                {
-                                    syntax.Parameters.Add(new CommandParameter(intValue));
-                                }
-                                else if (trimmedParam.StartsWith('\"') && trimmedParam.EndsWith('\"'))
-                                {
-                                    var stringValue = trimmedParam.Substring(1, trimmedParam.Length - 2);
-                                    syntax.Parameters.Add(new CommandParameter(stringValue));
-                                }
-                                else
-                                {
-                                    throw new SyntaxException($"Parámetro inválido: {trimmedParam}");
-                                }
+                                throw new SyntaxException($"Nombre de etiqueta inválido: '{label}'");
                             }
+                            _runtimeState.Labels[label] = i;
                         }
                     }
+                }
 
-                    var command = CommandFactory.CreateCommand(commandName);
-                    command.ValidateSyntax(syntax);
-                    command.Execute(_runtimeState);
+                // Segunda pasada: ejecución
+                _runtimeState.ProgramCounter = 0;
+                while (_runtimeState.ProgramCounter < lines.Length)
+                {
+                    string line = lines[_runtimeState.ProgramCounter];
+                    string trimmedLine = line.Trim();
+                    int currentLine = _runtimeState.ProgramCounter;
 
-                    // Actualizar propiedades de estado
-                    OnPropertyChanged(nameof(WallEPositionDisplay));
-                    OnPropertyChanged(nameof(CurrentColorDisplay));
-                    OnPropertyChanged(nameof(BrushSizeDisplay));
+                    // Avanzar al siguiente comando por defecto (a menos que haya un salto)
+                    _runtimeState.ProgramCounter++;
+                    _runtimeState.JumpRequested = false;
 
-                    // Actualizar canvas después de cada comando para ver progreso
-                    UpdateCanvasDisplay();
+                    if (string.IsNullOrWhiteSpace(trimmedLine))
+                        continue;
+
+                    // Manejar etiquetas (no son comandos ejecutables)
+                    if (trimmedLine.EndsWith(":"))
+                        continue;
+
+                    try
+                    {
+                        ProcessLine(trimmedLine, ref spawnCommandFound);
+
+                        // Actualizar UI
+                        OnPropertyChanged(nameof(WallEPositionDisplay));
+                        OnPropertyChanged(nameof(CurrentColorDisplay));
+                        OnPropertyChanged(nameof(BrushSizeDisplay));
+                        OnPropertyChanged(nameof(SpawnStatus));
+                        UpdateCanvasDisplay();
+
+                        // Si se solicitó un salto, continuar sin avanzar más (ProgramCounter ya fue actualizado)
+                        if (_runtimeState.JumpRequested)
+                        {
+                            continue;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Errors.Add(new ErrorInfo
+                        {
+                            LineNumber = currentLine + 1,
+                            Message = ex.Message
+                        });
+                        ExecutionResult = $"ERROR en línea {currentLine + 1}: {ex.Message}";
+                        return;
+                    }
+                }
+
+                if (!spawnCommandFound)
+                {
+                    throw new ExecutionException("El código debe contener un comando Spawn");
                 }
 
                 ExecutionResult = "¡Código ejecutado con éxito!";
@@ -174,15 +190,176 @@ namespace PixelWallE.ViewModels
             }
         }
 
+        private void ProcessLine(string line, ref bool spawnCommandFound)
+        {
+            // Manejar GoTo
+            if (line.StartsWith("GoTo"))
+            {
+                ProcessGoToCommand(line);
+                return;
+            }
+
+            // Manejar asignaciones
+            if (line.Contains("<-"))
+            {
+                ProcessAssignment(line);
+                return;
+            }
+
+            // Comandos regulares
+            ProcessRegularCommand(line, ref spawnCommandFound);
+        }
+
+        private void ProcessGoToCommand(string line)
+        {
+            // Parse: GoTo [label] (condition)
+            var parts = line.Split(new[] { '[', ']', '(', ')' }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (parts.Length < 2)
+                throw new SyntaxException("Sintaxis de GoTo inválida");
+
+            string label = parts[1].Trim();
+            string condition = parts.Length > 2 ? parts[2].Trim() : "1"; // Default to true
+
+            if (!_runtimeState.Labels.TryGetValue(label, out int targetLine))
+                throw new ExecutionException($"Etiqueta '{label}' no definida");
+
+            // Evaluate condition
+            var conditionExpr = ExpressionParser.Parse(condition);
+            var conditionResult = conditionExpr.Evaluate(_runtimeState);
+
+            bool shouldJump = _runtimeState.ConvertToBool(conditionResult);
+
+            if (shouldJump)
+            {
+                _runtimeState.ProgramCounter = targetLine;
+                _runtimeState.JumpRequested = true;
+            }
+        }
+
+        private void ProcessAssignment(string line)
+        {
+            var parts = line.Split(new[] { "<-" }, 2, StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length != 2)
+                throw new SyntaxException("Sintaxis de asignación inválida");
+
+            string varName = parts[0].Trim();
+            string expr = parts[1].Trim();
+
+            var syntax = new CommandSyntax("<-");
+            syntax.Parameters.Add(new CommandParameter(varName));
+            syntax.Parameters.Add(new CommandParameter(ExpressionParser.Parse(expr)));
+
+            var command = CommandFactory.CreateCommand("<-");
+            command.ValidateSyntax(syntax);
+            command.Execute(_runtimeState);
+        }
+
+        private void ProcessRegularCommand(string line, ref bool spawnCommandFound)
+        {
+            CommandSyntax syntax;
+            string commandName;
+
+            if (!line.Contains('(') || !line.Contains(')'))
+            {
+                commandName = line;
+                syntax = new CommandSyntax(commandName);
+            }
+            else
+            {
+                var openParen = line.IndexOf('(');
+                var closeParen = line.IndexOf(')');
+
+                if (openParen == -1 || closeParen == -1 || closeParen < openParen)
+                {
+                    throw new SyntaxException("Sintaxis inválida - faltan paréntesis");
+                }
+
+                commandName = line.Substring(0, openParen).Trim();
+                var parametersPart = line.Substring(openParen + 1, closeParen - openParen - 1);
+                syntax = new CommandSyntax(commandName);
+
+                if (!string.IsNullOrWhiteSpace(parametersPart))
+                {
+                    var parameters = SplitParameters(parametersPart);
+
+                    foreach (var param in parameters)
+                    {
+                        var trimmedParam = param.Trim();
+
+                        // Handle quoted strings
+                        if (trimmedParam.StartsWith('\"') && trimmedParam.EndsWith('\"'))
+                        {
+                            var stringValue = trimmedParam.Substring(1, trimmedParam.Length - 2);
+                            syntax.Parameters.Add(new CommandParameter(stringValue));
+                        }
+                        // Handle integers
+                        else if (int.TryParse(trimmedParam, out int intValue))
+                        {
+                            syntax.Parameters.Add(new CommandParameter(intValue));
+                        }
+                        // Handle expressions
+                        else
+                        {
+                            try
+                            {
+                                var expression = ExpressionParser.Parse(trimmedParam);
+                                syntax.Parameters.Add(new CommandParameter(expression));
+                            }
+                            catch
+                            {
+                                throw new SyntaxException($"Parámetro inválido: {trimmedParam}");
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Spawn validation
+            if (commandName.Equals("Spawn", StringComparison.OrdinalIgnoreCase))
+            {
+                if (spawnCommandFound)
+                    throw new ExecutionException("Spawn solo puede usarse una vez");
+
+                spawnCommandFound = true;
+            }
+            else if (!spawnCommandFound)
+            {
+                throw new ExecutionException("El primer comando debe ser Spawn");
+            }
+
+            var command = CommandFactory.CreateCommand(commandName);
+            command.ValidateSyntax(syntax);
+            command.Execute(_runtimeState);
+        }
+
+        private string[] SplitParameters(string input)
+        {
+            var result = new List<string>();
+            int start = 0;
+            int depth = 0;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                char c = input[i];
+                if (c == '(') depth++;
+                else if (c == ')') depth--;
+                else if (c == ',' && depth == 0)
+                {
+                    result.Add(input.Substring(start, i - start).Trim());
+                    start = i + 1;
+                }
+            }
+
+            result.Add(input.Substring(start).Trim());
+            return result.ToArray();
+        }
+
         private void ResizeCanvas()
         {
             _runtimeState.ResizeCanvas(CanvasSize);
             ExecutionResult = $"Canvas redimensionado a {CanvasSize}x{CanvasSize}";
-
-            // Actualizar propiedades de estado
             OnPropertyChanged(nameof(CanvasSizeDisplay));
-
-            // Reconstruir los píxeles del canvas
             InitializeCanvasPixels();
         }
 
@@ -238,7 +415,6 @@ namespace PixelWallE.ViewModels
             {
                 for (int x = 0; x < _runtimeState.CanvasSize; x++)
                 {
-                    // Manejo seguro de nulos con el operador ??
                     string pixelColor = _runtimeState.GetPixel(x, y) ?? "White";
                     CanvasPixels.Add(new PixelViewModel
                     {
@@ -254,20 +430,40 @@ namespace PixelWallE.ViewModels
 
         private void UpdateCanvasDisplay()
         {
-            for (int y = 0; y < _runtimeState.CanvasSize; y++)
+            // Actualizar solo píxeles modificados
+            if (_runtimeState.ModifiedPixels != null && _runtimeState.ModifiedPixels.Count > 0)
             {
-                for (int x = 0; x < _runtimeState.CanvasSize; x++)
+                foreach (var (x, y) in _runtimeState.ModifiedPixels)
                 {
-                    int index = y * _runtimeState.CanvasSize + x;
-                    if (index < CanvasPixels.Count)
+                    var pixel = CanvasPixels.FirstOrDefault(p => p.X == x && p.Y == y);
+                    if (pixel != null)
                     {
-                        var pixel = CanvasPixels[index];
-                        // Manejo seguro de nulos con el operador ??
-                        string pixelColor = _runtimeState.GetPixel(x, y) ?? "White";
-                        pixel.Color = new SolidColorBrush(_runtimeState.GetColorValue(pixelColor));
+                        string color = _runtimeState.GetPixel(x, y) ?? "White";
+                        pixel.Color = new SolidColorBrush(_runtimeState.GetColorValue(color));
                     }
                 }
+                _runtimeState.ClearModifiedPixels();
             }
         }
+
+        private bool IsValidLabelName(string label)
+        {
+            if (string.IsNullOrWhiteSpace(label)) return false;
+            if (char.IsDigit(label[0]) || label[0] == '_') return false;
+
+            foreach (char c in label)
+            {
+                if (!char.IsLetterOrDigit(c) && c != '-' && c != '_')
+                    return false;
+            }
+
+            return true;
+        }
+    }
+
+    public class ErrorInfo
+    {
+        public int LineNumber { get; set; }
+        public string Message { get; set; } = string.Empty;
     }
 }

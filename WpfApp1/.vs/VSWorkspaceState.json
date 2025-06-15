@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Core",
-    "\\Core\\Commands"
+    "\\Core\\Commands",
+    "\\Core\\Runtime",
+    "\\GUI",
+    "\\GUI\\Controls",
+    "\\GUI\\ViewModels"
   ],
-  "SelectedNode": "\\Core\\Commands\\DrawLineCommand.cs",
+  "SelectedNode": "\\GUI\\Controls\\CanvasControl.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

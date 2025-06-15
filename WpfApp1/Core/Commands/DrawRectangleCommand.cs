@@ -1,9 +1,8 @@
-// Core/Commands/DrawRectangleCommand.cs
 using PixelWallE.Core.Exceptions;
+using PixelWallE.Core.Expressions;
 using PixelWallE.Core.Parsing;
 using PixelWallE.Core.Runtime;
 using System;
-using System.Collections.Generic;
 using System.Windows;
 
 namespace PixelWallE.Core.Commands
@@ -12,38 +11,23 @@ namespace PixelWallE.Core.Commands
     {
         public string Name => "DrawRectangle";
 
-        private int _dirX;
-        private int _dirY;
-        private int _distance;
-        private int _width;
-        private int _height;
-
-        private static readonly HashSet<int> ValidDirections = new HashSet<int> { -1, 0, 1 };
+        private IPixelExpression _dirXExpr = null!;
+        private IPixelExpression _dirYExpr = null!;
+        private IPixelExpression _distanceExpr = null!;
+        private IPixelExpression _widthExpr = null!;
+        private IPixelExpression _heightExpr = null!;
 
         public void ValidateSyntax(CommandSyntax syntax)
         {
+            if (syntax == null) throw new ArgumentNullException(nameof(syntax));
             if (syntax.Parameters.Count != 5)
                 throw new SyntaxException("DrawRectangle command requires exactly 5 parameters (dirX, dirY, distance, width, height)");
 
-            if (!syntax.Parameters[0].IsInteger || !syntax.Parameters[1].IsInteger ||
-                !syntax.Parameters[2].IsInteger || !syntax.Parameters[3].IsInteger ||
-                !syntax.Parameters[4].IsInteger)
-                throw new SyntaxException("DrawRectangle parameters must be integers");
-
-            _dirX = syntax.Parameters[0].GetInteger();
-            _dirY = syntax.Parameters[1].GetInteger();
-            _distance = syntax.Parameters[2].GetInteger();
-            _width = syntax.Parameters[3].GetInteger();
-            _height = syntax.Parameters[4].GetInteger();
-
-            if (!ValidDirections.Contains(_dirX) || !ValidDirections.Contains(_dirY))
-                throw new SyntaxException("DrawRectangle direction parameters must be -1, 0, or 1");
-
-            if (_distance < 0)
-                throw new SyntaxException("DrawRectangle distance must be non-negative");
-
-            if (_width <= 0 || _height <= 0)
-                throw new SyntaxException("DrawRectangle width and height must be positive");
+            _dirXExpr = syntax.Parameters[0].Expression ?? throw new SyntaxException("Expresión inválida para dirX");
+            _dirYExpr = syntax.Parameters[1].Expression ?? throw new SyntaxException("Expresión inválida para dirY");
+            _distanceExpr = syntax.Parameters[2].Expression ?? throw new SyntaxException("Expresión inválida para distance");
+            _widthExpr = syntax.Parameters[3].Expression ?? throw new SyntaxException("Expresión inválida para width");
+            _heightExpr = syntax.Parameters[4].Expression ?? throw new SyntaxException("Expresión inválida para height");
         }
 
         public void Execute(RuntimeState state)
@@ -52,35 +36,51 @@ namespace PixelWallE.Core.Commands
                 throw new ExecutionException("Wall-E must be spawned before drawing");
 
             if (state.CurrentColor == "Transparent")
-                return; // No dibujar si el color es transparente
+                return;
 
-            // Calcular el centro del rectángulo
+            // Evaluar expresiones
+            var dirXObj = _dirXExpr.Evaluate(state);
+            var dirYObj = _dirYExpr.Evaluate(state);
+            var distanceObj = _distanceExpr.Evaluate(state);
+            var widthObj = _widthExpr.Evaluate(state);
+            var heightObj = _heightExpr.Evaluate(state);
+
+            if (!(dirXObj is int dirX) || !(dirYObj is int dirY) ||
+                !(distanceObj is int distance) || !(widthObj is int width) || !(heightObj is int height))
+            {
+                throw new ExecutionException("DrawRectangle parameters must be integers");
+            }
+
+            if (dirX < -1 || dirX > 1 || dirY < -1 || dirY > 1)
+                throw new ExecutionException("DrawRectangle direction parameters must be -1, 0, or 1");
+
+            if (distance < 0)
+                throw new ExecutionException("DrawRectangle distance must be non-negative");
+
+            if (width <= 0 || height <= 0)
+                throw new ExecutionException("DrawRectangle width and height must be positive");
+
             Point center = new Point(
-                state.WallEPosition.X + _dirX * _distance,
-                state.WallEPosition.Y + _dirY * _distance
+                state.WallEPosition.X + dirX * distance,
+                state.WallEPosition.Y + dirY * distance
             );
 
-            // Validar que el centro esté dentro del canvas
             if (!IsPointInCanvas(center, state.CanvasSize))
                 throw new ExecutionException("Rectangle center is out of canvas bounds");
 
-            // Calcular las coordenadas del rectángulo
-            int left = (int)(center.X - _width / 2.0);
-            int top = (int)(center.Y - _height / 2.0);
-            int right = left + _width - 1;
-            int bottom = top + _height - 1;
+            int left = (int)Math.Round(center.X - width / 2.0);
+            int top = (int)Math.Round(center.Y - height / 2.0);
+            int right = left + width;
+            int bottom = top + height;
 
-            // Validar que el rectángulo esté dentro del canvas
             if (left < 0 || top < 0 || right >= state.CanvasSize || bottom >= state.CanvasSize)
                 throw new ExecutionException("Rectangle is out of canvas bounds");
 
-            // Dibujar las cuatro líneas del rectángulo
-            DrawLine(state, new Point(left, top), new Point(right, top)); // Línea superior
-            DrawLine(state, new Point(left, bottom), new Point(right, bottom)); // Línea inferior
-            DrawLine(state, new Point(left, top), new Point(left, bottom)); // Línea izquierda
-            DrawLine(state, new Point(right, top), new Point(right, bottom)); // Línea derecha
+            DrawLine(state, new Point(left, top), new Point(right, top));
+            DrawLine(state, new Point(left, bottom), new Point(right, bottom));
+            DrawLine(state, new Point(left, top), new Point(left, bottom));
+            DrawLine(state, new Point(right, top), new Point(right, bottom));
 
-            // Actualizar la posición de Wall-E al centro del rectángulo
             state.WallEPosition = center;
         }
 
@@ -90,7 +90,6 @@ namespace PixelWallE.Core.Commands
                    point.Y >= 0 && point.Y < canvasSize;
         }
 
-        // Método auxiliar para dibujar líneas (similar al de DrawLineCommand)
         private void DrawLine(RuntimeState state, Point start, Point end)
         {
             int x0 = (int)Math.Round(start.X);
@@ -112,7 +111,6 @@ namespace PixelWallE.Core.Commands
 
             while (true)
             {
-                // Pintar un cuadrado centrado en (x, y) con el tamaño del pincel
                 for (int i = -halfBrush; i <= halfBrush; i++)
                 {
                     for (int j = -halfBrush; j <= halfBrush; j++)

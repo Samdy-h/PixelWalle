@@ -1,8 +1,8 @@
-// Core/Commands/SizeCommand.cs
-using PixelWallE.Core.Runtime;
-using PixelWallE.Core.Parsing;
 using PixelWallE.Core.Exceptions;
-
+using PixelWallE.Core.Expressions;
+using PixelWallE.Core.Parsing;
+using PixelWallE.Core.Runtime;
+using System;
 
 namespace PixelWallE.Core.Commands
 {
@@ -10,27 +10,28 @@ namespace PixelWallE.Core.Commands
     {
         public string Name => "Size";
 
-        private int _size;
+        private IPixelExpression _sizeExpression = null!;
 
         public void ValidateSyntax(CommandSyntax syntax)
         {
+            if (syntax == null) throw new ArgumentNullException(nameof(syntax));
             if (syntax.Parameters.Count != 1)
                 throw new SyntaxException("Size command requires exactly 1 parameter");
 
-            if (!syntax.Parameters[0].IsInteger)
-                throw new SyntaxException("Size parameter must be an integer");
-
-            _size = syntax.Parameters[0].GetInteger();
-
-            if (_size <= 0)
-                throw new SyntaxException("Brush size must be greater than 0");
+            _sizeExpression = syntax.Parameters[0].Expression ?? throw new SyntaxException("Expresión inválida");
         }
 
         public void Execute(RuntimeState state)
         {
-            // Ajustar a número impar si es par
-            _size = _size % 2 == 0 ? _size - 1 : _size;
-            state.BrushSize = _size;
+            var sizeObj = _sizeExpression.Evaluate(state);
+            if (!(sizeObj is int size))
+                throw new ExecutionException("Size parameter must be an integer");
+
+            if (size <= 0)
+                throw new ExecutionException("Brush size must be greater than 0");
+
+            size = size % 2 == 0 ? size - 1 : size;
+            state.BrushSize = size;
         }
     }
 }

@@ -1,7 +1,9 @@
 using PixelWallE.Core.Exceptions;
+using PixelWallE.Core.Expressions;
 using PixelWallE.Core.Parsing;
 using PixelWallE.Core.Runtime;
 using System.Collections.Generic;
+using System;
 
 namespace PixelWallE.Core.Commands
 {
@@ -9,7 +11,7 @@ namespace PixelWallE.Core.Commands
     {
         public string Name => "Color";
 
-        private string _color = string.Empty;
+        private IPixelExpression _colorExpression = null!;
 
         private static readonly HashSet<string> ValidColors = new HashSet<string>
         {
@@ -19,21 +21,25 @@ namespace PixelWallE.Core.Commands
 
         public void ValidateSyntax(CommandSyntax syntax)
         {
+            if (syntax == null) throw new ArgumentNullException(nameof(syntax));
             if (syntax.Parameters.Count != 1)
                 throw new SyntaxException("Color command requires exactly 1 parameter");
 
-            if (!syntax.Parameters[0].IsString)
-                throw new SyntaxException("Color parameter must be a string");
-
-            _color = syntax.Parameters[0].GetString() ?? string.Empty;
-
-            if (string.IsNullOrEmpty(_color) || !ValidColors.Contains(_color))
-                throw new SyntaxException($"Invalid color '{_color}'. Valid colors are: {string.Join(", ", ValidColors)}");
+            _colorExpression = syntax.Parameters[0].Expression ?? throw new SyntaxException("Invalid expression");
         }
 
         public void Execute(RuntimeState state)
         {
-            state.CurrentColor = _color;
+            var colorObj = _colorExpression.Evaluate(state);
+
+            // Convertir a string si es necesario
+            string color = colorObj?.ToString() ?? "";
+
+            // Validar que sea un color permitido
+            if (string.IsNullOrEmpty(color) || !ValidColors.Contains(color))
+                throw new ExecutionException($"Invalid color '{color}'. Valid colors are: {string.Join(", ", ValidColors)}");
+
+            state.CurrentColor = color;
         }
     }
 }

@@ -66,6 +66,8 @@
 					<RowDefinition Height="Auto"/>
 					<RowDefinition Height="*"/>
 					<RowDefinition Height="Auto"/>
+					<RowDefinition Height="Auto"/>
+					<!-- Nueva fila para errores -->
 				</Grid.RowDefinitions>
 
 				<!-- Informacion de estado -->
@@ -90,6 +92,24 @@
                                    TextWrapping="Wrap"
                                    Margin="5"/>
 					</ScrollViewer>
+				</GroupBox>
+
+				<!-- Panel de errores -->
+				<GroupBox Grid.Row="3" Header="Errores" Margin="5">
+					<ListBox ItemsSource="{Binding Errors}"
+                             Background="#FFF0F0F0"
+                             BorderThickness="0">
+						<ListBox.ItemTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal" Margin="2">
+									<TextBlock Text="Línea " FontWeight="Bold"/>
+									<TextBlock Text="{Binding LineNumber}" FontWeight="Bold" Foreground="Red"/>
+									<TextBlock Text=": "/>
+									<TextBlock Text="{Binding Message}" TextWrapping="Wrap"/>
+								</StackPanel>
+							</DataTemplate>
+						</ListBox.ItemTemplate>
+					</ListBox>
 				</GroupBox>
 			</Grid>
 		</Grid>

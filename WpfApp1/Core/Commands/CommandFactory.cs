@@ -14,7 +14,9 @@ namespace PixelWallE.Core.Commands
             { "DrawLine", () => new DrawLineCommand() },
             { "DrawCircle", () => new DrawCircleCommand() },
             { "DrawRectangle", () => new DrawRectangleCommand() },
-            { "Fill", () => new FillCommand() }
+            { "Fill", () => new FillCommand() },
+            { "<-", () => new AssignmentCommand() }, // Nuevo comando de asignación
+            { "GoTo", () => new GoToCommand() }
         };
 
         public static IPixelCommand CreateCommand(string commandName)

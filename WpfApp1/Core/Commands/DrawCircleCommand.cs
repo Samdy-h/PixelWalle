@@ -1,9 +1,8 @@
-// Core/Commands/DrawCircleCommand.cs
 using PixelWallE.Core.Exceptions;
+using PixelWallE.Core.Expressions;
 using PixelWallE.Core.Parsing;
 using PixelWallE.Core.Runtime;
 using System;
-using System.Collections.Generic;
 using System.Windows;
 
 namespace PixelWallE.Core.Commands
@@ -12,29 +11,19 @@ namespace PixelWallE.Core.Commands
     {
         public string Name => "DrawCircle";
 
-        private int _dirX;
-        private int _dirY;
-        private int _radius;
-
-        private static readonly HashSet<int> ValidDirections = new HashSet<int> { -1, 0, 1 };
+        private IPixelExpression _dirXExpr = null!;
+        private IPixelExpression _dirYExpr = null!;
+        private IPixelExpression _radiusExpr = null!;
 
         public void ValidateSyntax(CommandSyntax syntax)
         {
+            if (syntax == null) throw new ArgumentNullException(nameof(syntax));
             if (syntax.Parameters.Count != 3)
                 throw new SyntaxException("DrawCircle command requires exactly 3 parameters (dirX, dirY, radius)");
 
-            if (!syntax.Parameters[0].IsInteger || !syntax.Parameters[1].IsInteger || !syntax.Parameters[2].IsInteger)
-                throw new SyntaxException("DrawCircle parameters must be integers");
-
-            _dirX = syntax.Parameters[0].GetInteger();
-            _dirY = syntax.Parameters[1].GetInteger();
-            _radius = syntax.Parameters[2].GetInteger();
-
-            if (!ValidDirections.Contains(_dirX) || !ValidDirections.Contains(_dirY))
-                throw new SyntaxException("DrawCircle direction parameters must be -1, 0, or 1");
-
-            if (_radius <= 0)
-                throw new SyntaxException("DrawCircle radius must be positive");
+            _dirXExpr = syntax.Parameters[0].Expression ?? throw new SyntaxException("Expresión inválida para dirX");
+            _dirYExpr = syntax.Parameters[1].Expression ?? throw new SyntaxException("Expresión inválida para dirY");
+            _radiusExpr = syntax.Parameters[2].Expression ?? throw new SyntaxException("Expresión inválida para radius");
         }
 
         public void Execute(RuntimeState state)
@@ -43,22 +32,30 @@ namespace PixelWallE.Core.Commands
                 throw new ExecutionException("Wall-E must be spawned before drawing");
 
             if (state.CurrentColor == "Transparent")
-                return; // No dibujar si el color es transparente
+                return;
 
-            // Calcular el centro del círculo
+            var dirXObj = _dirXExpr.Evaluate(state);
+            var dirYObj = _dirYExpr.Evaluate(state);
+            var radiusObj = _radiusExpr.Evaluate(state);
+
+            if (!(dirXObj is int dirX) || !(dirYObj is int dirY) || !(radiusObj is int radius))
+                throw new ExecutionException("DrawCircle parameters must be integers");
+
+            if (dirX < -1 || dirX > 1 || dirY < -1 || dirY > 1)
+                throw new ExecutionException("DrawCircle direction parameters must be -1, 0, or 1");
+
+            if (radius <= 0)
+                throw new ExecutionException("DrawCircle radius must be positive");
+
             Point center = new Point(
-                state.WallEPosition.X + _dirX * _radius,
-                state.WallEPosition.Y + _dirY * _radius
+                state.WallEPosition.X + dirX * radius,
+                state.WallEPosition.Y + dirY * radius
             );
 
-            // Validar que el centro esté dentro del canvas
             if (!IsPointInCanvas(center, state.CanvasSize))
                 throw new ExecutionException("Circle center is out of canvas bounds");
 
-            // Dibujar el círculo
-            DrawCircle(state, center);
-
-            // Actualizar la posición de Wall-E al centro del círculo
+            DrawCircle(state, center, radius);
             state.WallEPosition = center;
         }
 
@@ -68,16 +65,13 @@ namespace PixelWallE.Core.Commands
                    point.Y >= 0 && point.Y < canvasSize;
         }
 
-        private void DrawCircle(RuntimeState state, Point center)
+        private void DrawCircle(RuntimeState state, Point center, int radius)
         {
             int cx = (int)Math.Round(center.X);
             int cy = (int)Math.Round(center.Y);
-            int r = _radius;
-
-            // Usamos el algoritmo del punto medio para dibujar círculos
             int x = 0;
-            int y = r;
-            int d = 3 - 2 * r;
+            int y = radius;
+            int d = 3 - 2 * radius;
 
             DrawCirclePoints(state, cx, cy, x, y);
 
@@ -99,7 +93,6 @@ namespace PixelWallE.Core.Commands
 
         private void DrawCirclePoints(RuntimeState state, int cx, int cy, int x, int y)
         {
-            // Dibujar en los 8 octantes (simetría del círculo)
             DrawBrushAt(state, cx + x, cy + y);
             DrawBrushAt(state, cx - x, cy + y);
             DrawBrushAt(state, cx + x, cy - y);

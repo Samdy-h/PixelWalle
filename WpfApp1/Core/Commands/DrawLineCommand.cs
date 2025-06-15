@@ -1,9 +1,9 @@
 using PixelWallE.Core.Exceptions;
+using PixelWallE.Core.Expressions;
 using PixelWallE.Core.Parsing;
 using PixelWallE.Core.Runtime;
 using System;
-using System.Collections.Generic;
-using System.Windows; // Para Point
+using System.Windows;
 
 namespace PixelWallE.Core.Commands
 {
@@ -11,29 +11,19 @@ namespace PixelWallE.Core.Commands
     {
         public string Name => "DrawLine";
 
-        private int _dirX;
-        private int _dirY;
-        private int _distance;
-
-        private static readonly HashSet<int> ValidDirections = new HashSet<int> { -1, 0, 1 };
+        private IPixelExpression _dirXExpr = null!;
+        private IPixelExpression _dirYExpr = null!;
+        private IPixelExpression _distanceExpr = null!;
 
         public void ValidateSyntax(CommandSyntax syntax)
         {
+            if (syntax == null) throw new ArgumentNullException(nameof(syntax));
             if (syntax.Parameters.Count != 3)
                 throw new SyntaxException("DrawLine command requires exactly 3 parameters (dirX, dirY, distance)");
 
-            if (!syntax.Parameters[0].IsInteger || !syntax.Parameters[1].IsInteger || !syntax.Parameters[2].IsInteger)
-                throw new SyntaxException("DrawLine parameters must be integers");
-
-            _dirX = syntax.Parameters[0].GetInteger();
-            _dirY = syntax.Parameters[1].GetInteger();
-            _distance = syntax.Parameters[2].GetInteger();
-
-            if (!ValidDirections.Contains(_dirX) || !ValidDirections.Contains(_dirY))
-                throw new SyntaxException("DrawLine direction parameters must be -1, 0, or 1");
-
-            if (_distance < 0)
-                throw new SyntaxException("DrawLine distance must be non-negative");
+            _dirXExpr = syntax.Parameters[0].Expression ?? throw new SyntaxException("Expresión inválida para dirX");
+            _dirYExpr = syntax.Parameters[1].Expression ?? throw new SyntaxException("Expresión inválida para dirY");
+            _distanceExpr = syntax.Parameters[2].Expression ?? throw new SyntaxException("Expresión inválida para distance");
         }
 
         public void Execute(RuntimeState state)
@@ -42,23 +32,46 @@ namespace PixelWallE.Core.Commands
                 throw new ExecutionException("Wall-E must be spawned before drawing");
 
             if (state.CurrentColor == "Transparent")
-                return; // No dibujar si el color es transparente
+                return;
 
-            Point start = state.WallEPosition;
-            Point end = new Point(
-                start.X + _dirX * _distance,
-                start.Y + _dirY * _distance
-            );
+            try
+            {
+                // Evaluar expresiones y manejar posibles nulos
+                object? dirXVal = _dirXExpr.Evaluate(state);
+                object? dirYVal = _dirYExpr.Evaluate(state);
+                object? distanceVal = _distanceExpr.Evaluate(state);
 
-            // Validar que la línea esté dentro del canvas
-            if (!IsPointInCanvas(start, state.CanvasSize) || !IsPointInCanvas(end, state.CanvasSize))
-                throw new ExecutionException("Line is out of canvas bounds");
+                // Convertir a enteros usando el método seguro
+                int dirX = state.ConvertToInt(dirXVal);
+                int dirY = state.ConvertToInt(dirYVal);
+                int distance = state.ConvertToInt(distanceVal);
 
-            // Dibujar la línea
-            DrawLine(state, start, end);
+                if (dirX < -1 || dirX > 1 || dirY < -1 || dirY > 1)
+                    throw new ExecutionException("DrawLine direction parameters must be -1, 0, or 1");
 
-            // Actualizar la posición de Wall-E
-            state.WallEPosition = end;
+                if (distance < 0)
+                    throw new ExecutionException("DrawLine distance must be non-negative");
+
+                Point start = state.WallEPosition;
+                Point end = new Point(
+                    start.X + dirX * distance,
+                    start.Y + dirY * distance
+                );
+
+                if (!IsPointInCanvas(start, state.CanvasSize) || !IsPointInCanvas(end, state.CanvasSize))
+                    throw new ExecutionException("Line is out of canvas bounds");
+
+                DrawLine(state, start, end);
+                state.WallEPosition = end;
+            }
+            catch (ExecutionException ex)
+            {
+                throw new ExecutionException($"Error en DrawLine: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                throw new ExecutionException($"Error inesperado en DrawLine: {ex.Message}");
+            }
         }
 
         private bool IsPointInCanvas(Point point, int canvasSize)
@@ -89,7 +102,6 @@ namespace PixelWallE.Core.Commands
 
             while (true)
             {
-                // Pintar un cuadrado centrado en (x, y) con el tamaño del pincel
                 for (int i = -halfBrush; i <= halfBrush; i++)
                 {
                     for (int j = -halfBrush; j <= halfBrush; j++)
